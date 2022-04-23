@@ -33,7 +33,7 @@ try{
 }
 
 
-// catch 404 and forward to error handler
+// render the 'page-not-found' template if the route does not exist
 app.use(function(req, res, next) {
   const err = new Error();
   err.status = 404;
@@ -41,7 +41,7 @@ app.use(function(req, res, next) {
   res.status(404).render('page-not-found', { error: err });
 });
 
-// error handler
+// global error handler
 app.use(function(err, req, res, next) {
   if (err) {
     console.log('Global error handler called', err);

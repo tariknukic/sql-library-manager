@@ -38,30 +38,8 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    genre: { 
-      type :DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Please provide a value for "genre"'
-        },
-        notEmpty: {
-            msg: 'Please provide a value for "genre"'
-        }
-      }
-    },
-    year: { 
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        notNull: {
-          msg: 'Please provide a value for "year"'
-        },
-        notEmpty: {
-            msg: 'Please provide a value for "year"'
-        }
-      }
-    }
+    genre: DataTypes.STRING,
+    year: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Book',
